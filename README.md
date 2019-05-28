@@ -1,5 +1,5 @@
 
-### Reverse Shell over TCP (+ AES Encryption) using PowerShell SecureString Method: Client & C2 Server Listener. ###
+### Reverse Shell over TCP (+ AES Encryption) using PowerShell SecureString Method: Client & C2-Server Listener. ###
 
 - Attacker:
 
