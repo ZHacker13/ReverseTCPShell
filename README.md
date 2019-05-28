@@ -1,12 +1,10 @@
 
-### Reverse Shell over TCP (+ AES Encryption) using PowerShell SecureString Method:
+Reverse Shell over TCP (+ AES Encryption) using PowerShell SecureString Method:
 Client & C2 Server Listener.
 
 - Attacker:
 
 PS> .\Server.ps1
-Port:4444
-[*] Listeneing on Port ["4444"] [*]
 
 - Target:
 
