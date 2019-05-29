@@ -1,5 +1,5 @@
 
-### Reverse Encrypted (AES 256-bit) Shell over TCP using PowerShell SecureString: ###
+### Reverse Encrypted (AES 256-bit) Shell over TCP using PowerShell SecureString. ###
 
 - Attacker (C2-Server Listener):
 
