@@ -11,5 +11,10 @@ PS> $Key=(226,183,97,6,17,176,21,164,211,64,197,229,220,92,207,182,192,132,103,2
 
 ### PoC: ###
 
+- Reverse Shell over TCP (+ AES Encryption) PowerShell Execution (Client & C2-Server Listener):
+
 ![alt text](/PoC1.jpg)
+
+- Reverse Shell over TCP (+ AES Encryption) Encrypted session Traffic (WireShark):
+
 ![alt text](/PoC2.jpg)
