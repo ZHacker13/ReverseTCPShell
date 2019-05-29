@@ -1,5 +1,5 @@
 
-### Reverse Encrypted Shell over TCP (+ AES Encryption) using PowerShell SecureString, ###
+### Reverse Encrypted Shell over TCP (AES 256-bit) using PowerShell SecureString, ###
 
 - Attacker (C2-Server Listener):
 
@@ -11,10 +11,10 @@ PS> $Key=(226,183,97,6,17,176,21,164,211,64,197,229,220,92,207,182,192,132,103,2
 
 ### PoC: ###
 
-- Reverse Shell over TCP (+ AES Encryption) PowerShell Execution (Client & C2-Server Listener):
+- Reverse Encrypted Shell over TCP (AES 256-bit) PowerShell Execution (C2-Server Listener & Client):
 
 ![alt text](/PoC1.jpg)
 
-- Reverse Shell over TCP (+ AES Encryption) Encrypted session Traffic (WireShark):
+- Reverse Encrypted Shell over TCP (AES 256-bit) Encrypted Traffic (WireShark):
 
 ![alt text](/PoC2.jpg)
