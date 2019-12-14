@@ -7,10 +7,4 @@ PS> .\ReverseTCP.ps1
 
 ### PoC: ###
 
-- Payload Execution:
-
-![alt text](/PoC1.jpg)
-
-- Analyze Encrypted Traffic:
-
-![alt text](/ReverseTCP.mp4)
+<video src="ReverseTCP.mp4" width="320" height="200" controls preload></video>
