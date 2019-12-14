@@ -7,4 +7,4 @@ PS> .\ReverseTCP.ps1
 
 ### PoC: ###
 
-<video src="ReverseTCP.mp4" width="320" height="200" controls preload></video>
+<video src="ReverseTCP.mp4" width="1000" height="200" controls preload></video>
