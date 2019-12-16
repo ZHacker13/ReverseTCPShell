@@ -56,7 +56,7 @@ function Variable_Obfuscation($String)
 function ASCII_Obfuscation($String)
 {
   $PowerShell = "IEX(-Join((@)|%{[char]`$_}));Exit";
-  $CMD = "ECHO `"IEX(-Join((@)|%{[char]```$_}));Exit`" | PowerShell -noP -nol -Win hidden -nonI -Exe ByPass `"IEX(IEX(`$input))`"&Exit";
+  $CMD = "ECHO `"IEX(-Join((@)|%{[char]```$_}));Exit`" | PowerShell `"IEX(IEX(`$input))`"&Exit";
   
   $String = [System.Text.Encoding]::ASCII.GetBytes($String) -join ',';
   
@@ -72,7 +72,7 @@ function ASCII_Obfuscation($String)
 function Base64_Obfuscation($String)
 {
   $PowerShell = "IEX([Text.Encoding]::ASCII.GetString([Convert]::FromBase64String(([Text.Encoding]::ASCII.GetString(([Text.Encoding]::ASCII.GetBytes({@})|Sort-Object {Get-Random -SetSeed #}))))));Exit";
-  $CMD = "ECHO `"IEX([Text.Encoding]::ASCII.GetString([Convert]::FromBase64String(([Text.Encoding]::ASCII.GetString(([Text.Encoding]::ASCII.GetBytes({@})|Sort-Object {Get-Random -SetSeed #}))))));Exit`" | PowerShell -noP -nol -Win hidden -nonI -Exe ByPass `"IEX(IEX(`$input))`"&Exit";
+  $CMD = "ECHO `"IEX([Text.Encoding]::ASCII.GetString([Convert]::FromBase64String(([Text.Encoding]::ASCII.GetString(([Text.Encoding]::ASCII.GetBytes({@})|Sort-Object {Get-Random -SetSeed #}))))));Exit`" | PowerShell `"IEX(IEX(`$input))`"&Exit";
   
   $Seed = (Get-Random -Minimum 0 -Maximum 999999999).ToString('000000000');
   $String = [Text.Encoding]::ASCII.GetString(([Text.Encoding]::ASCII.GetBytes([Convert]::ToBase64String([System.Text.Encoding]::ASCII.GetBytes($String))) | Sort-Object {Get-Random -SetSeed $Seed}));
@@ -91,7 +91,7 @@ function Base64_Obfuscation($String)
 function BXOR_Obfuscation($String)
 {
   $PowerShell = "IEX(-Join((@)|%{[char](`$_-BXOR #)}));Exit";
-  $CMD = "ECHO `"IEX(-Join((@)|%{[char](```$_-BXOR #)}));Exit`" | PowerShell -noP -nol -Win hidden -nonI -Exe ByPass `"IEX(IEX(`$input))`"&Exit";
+  $CMD = "ECHO `"IEX(-Join((@)|%{[char](```$_-BXOR #)}));Exit`" | PowerShell `"IEX(IEX(`$input))`"&Exit";
 
   $Key = '0x' + ((0..5) | Get-Random) + ((0..9) + ((65..70) + (97..102) | % {[char]$_}) | Get-Random);
   $String = ([System.Text.Encoding]::ASCII.GetBytes($String) | % {$_ -BXOR $Key}) -join ',';
