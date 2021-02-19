@@ -20,6 +20,6 @@
 
 ```
 
-## Tutorial: ##
+## Twitter: ##
 
-### https://youtu.be/hiYyXv4RdD8 ###
+### https://twitter.com/ZHacker13/status/1206737395401531393 ###
