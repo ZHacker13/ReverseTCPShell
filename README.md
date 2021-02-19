@@ -22,4 +22,4 @@
 
 ## PoC: ##
 
-{PoC.jpg}
+![](PoC.jpg)
